@@ -19,4 +19,3 @@ EXPOSE 8080
 
 # Run with Gunicorn in production
 CMD ["sh", "-c", "gunicorn -w 2 -b 0.0.0.0:${PORT} app:app"]
-``
