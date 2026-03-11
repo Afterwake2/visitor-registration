@@ -111,8 +111,9 @@ def register():
             }
         })
     except Exception as e:
-        app.logger.exception("Database insert failed")
-        return jsonify({"success": False, "error": "Database insert failed"}), 500
+        app.logger.exception("Insert failed")
+        # ⚠️ TEMPORARY: echo the error to the client so we can see it. Remove after we fix it.
+        return jsonify({"success": False, "error": f"{type(e).__name__}: {str(e)}"}), 500
     finally:
         pool.putconn(conn)
 
