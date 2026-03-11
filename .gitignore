@@ -1,4 +1,18 @@
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
 .env
-postgres_data
+
+# Byte-compiled / cache
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
